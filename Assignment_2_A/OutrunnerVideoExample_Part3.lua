@@ -6,7 +6,7 @@
 --------------------------------------------
 
 -- set up model
-steps_per_electrical_cycle = 12;
+steps_per_electrical_cycle = 18; --should be muktiple of 3
 number_of_electrical_cycles = 1;
 
 number_of_poles = 14; 
@@ -14,7 +14,7 @@ phase_current_rms = 0.1;
 
 steps = steps_per_electrical_cycle*number_of_electrical_cycles;
 current_mag = sqrt(2)*phase_current_rms;
-current_offset_angle = 90; --aline current with back emf
+current_offset_angle = -120; --aline current with back emf
 
 -- load geometry
 mydir="./"
