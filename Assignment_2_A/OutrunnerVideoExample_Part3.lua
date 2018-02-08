@@ -6,7 +6,7 @@
 --------------------------------------------
 
 -- set up model
-steps_per_electrical_cycle = 18; --should be muktiple of 3
+steps_per_electrical_cycle = 18; --should be multiple of 3
 number_of_electrical_cycles = 1;
 
 number_of_poles = 14; 
