@@ -12,7 +12,15 @@ for n=0,15 do
     if (n<15) then
         mi_selectgroup(3)
         mi_movetranslate(0,0.1)
+        a
     end
 end
 mo_close()
 mi_close()
+
+
+print(clock());
+if clock_update == false then
+    clock_now =  clock();
+    clock_diff = clock_now - clock_before;
+    
