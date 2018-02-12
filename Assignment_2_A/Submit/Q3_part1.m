@@ -8,7 +8,7 @@ Data = csvread('OutrunnerVideoExample_Part3.csv',1,0);
 Angle = Data(:,1);
 Torque = Data(:,2);
 FluxLinkage = Data(:,3:5);
- Current = Data(:,6:8);
+Current = Data(:,6:8);
 
 %% calculations
 K = circshift(FluxLinkage, [-round(length(Angle)*(90)/360),0])*NumberPoles/2;  % differentiate in frequency domain
@@ -51,5 +51,10 @@ AverageTorque = mean(Torque);
 
 
 Ke = FluxLinkageRMS*NumberPoles/2
-Kt = Ke*3
+Kt = Ke*3 %reconstructed, flux linkage from FEMM
+
+%Irms
+Irms = max(max(Current))/sqrt(2);
+Kt_2 = AverageTorque/Irms 
+
 
